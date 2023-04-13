@@ -16,29 +16,25 @@ body{
 
 .container{
     display: flex;
-    width: 90hv;
+    /* width: 90vh; */
 }
 
 .panel{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 90vh;
     border-radius: 50px;
     color: #fff;
     cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
+    flex: 1;
+    margin:10px;
     position: relative;
     transition: flex 0.7s ease-in;
 }
 
 .panel h3 {
-    font-size: 24px;
-    /* position: absolute; */
-    text-align: center;
-    /* bottom: 20px;
-    left: 20px; */
+    font-size: 24px;  
     margin: 0;
     opacity: 0;
 }
@@ -49,6 +45,10 @@ body{
 
 .panel.active h3{
     opacity: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media(max-width:480px) {
